@@ -247,7 +247,7 @@ function initPage(ediscope) {
     .append("div")
     .attr("class", "footerDiv")
     .attr("id", "download")
-    .html('<div id="downloadText">Download to CSV</div><button id="downloadButton" class="btn btn-secondary" role="button" value="Download"><a id="downloadButtonA" href="#" download="Jornada_Basin_LTER_Data_Catalog.csv"><i class="fa fa-download"></i></a></button>');
+    .html('<div id="downloadText">Download to CSV</div><button id="downloadButton" class="btn btn-secondary" role="button" value="Download"><a id="downloadButtonA" href="#" download="Arctic_LTER_Data_Catalog.csv"><i class="fa fa-download"></i></a></button>');
 
   //***Add paging
   d3.select("#footerContainer")
@@ -278,7 +278,7 @@ function initPage(ediscope) {
     }
 
     //***Add in data fields to retrieve
-      var tmpFields = ["abstract", "begindate", "doi", "enddate", "funding", "geographicdescription", "id", "methods", "packageid", "pubdate", "responsibleParties", "scope", "singledate", "site", "taxonomic", "title", "author", "coordinates", "keyword", "organization", "projectTitle", "relatedProjectTitle", "timescale"];
+      var tmpFields = [ "title", "author", "abstract", "keyword", "begindate",  "enddate", "geographicdescription", "methods", "id", "packageid", "pubdate", "responsibleParties",  "doi","funding", "singledate", "site", "coordinates","organization", "projectTitle", "relatedProjectTitle", "timescale"];
       tmpFields.forEach(function(field, i) {
         if (i == 0) {
           tmpQuery += "&fl=" + field;
